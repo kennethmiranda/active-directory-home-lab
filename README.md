@@ -184,8 +184,8 @@ foreach ($n in $USER_FIRST_LAST_LIST) {
 
 ## 🔎 9. Verify Setup
 
-### On DC:
-- **DHCP** → IPv4 → Address Leases → Check `CLIENT1`
+### On the Domain Controller Virtual Machine:
+- **DHCP** → IPv4 → Address Leases → Confirm `CLIENT1` listed
 - **AD Users and Computers** → Domain → Computers → Confirm `CLIENT1` listed
 
 ---
