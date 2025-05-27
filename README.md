@@ -64,7 +64,7 @@ Then restart the DC (Domain Controller) PC.
 - Deployment: **Add a new forest**
 - Root domain: `mydomain.com`
 - Password: `Password1`
-- Complete and sign back in
+- Install and complete, then sign back in
 
 ---
 
