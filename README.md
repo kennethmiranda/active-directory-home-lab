@@ -103,7 +103,7 @@ Then restart the DC (Domain Controller) PC.
 
 ## 🔄 6. Create Test Users with PowerShell
 
-### Create a text file on the Desktop
+- Create a text file on the Desktop:
 
 ```powershell
 $PASSWORD_FOR_USERS = "Password1"
