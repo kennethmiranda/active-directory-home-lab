@@ -189,3 +189,12 @@ foreach ($n in $USER_FIRST_LAST_LIST) {
 - **AD Users and Computers** → Domain → Computers → Confirm `CLIENT1` listed
 
 ---
+
+<div align="left">
+  <a href="kennymiranda000@gmail.com" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=Email&logo=gmail&label=&color=D14836&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="gmail logo"  />
+  </a>
+  <a href="https://www.linkedin.com/in/kenneth-miranda-xyz" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="linkedin logo"  />
+  </a>
+</div>
