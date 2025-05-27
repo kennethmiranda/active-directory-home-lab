@@ -10,9 +10,9 @@ This project guides you step-by-step through setting up a Windows Active Directo
 - [Download VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 - Install:
   - **Windows Hosts** package
-  - ![VM Setup Screenshot 1](./images/virtualbox1.png)
+    ![VM Setup Screenshot 1](./images/virtualbox1.PNG)
   - **Extension Pack**
-  - ![VM Setup Screenshot 2](./images/virtualbox2.png)
+    ![VM Setup Screenshot 2](./images/virtualbox2.PNG)
 
 ### 💿 ISOs Needed
 - [Windows Server 2019 ISO](https://www.microsoft.com/en-us/evalcenter/download-windows-server-2019)
