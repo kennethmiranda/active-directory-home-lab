@@ -98,7 +98,7 @@ Then restart the DC (Domain Controller) PC.
   - IP Range: `172.16.0.100` - `172.16.0.200`
   - Subnet: `255.255.255.0`
   - Router: `172.16.0.1`
-  - Domain: `mydomain.com`
+  - Domain: `mydomain.com` & `172.16.0.1`
 - Activate scope, authorize and refresh
 
 ---
