@@ -137,8 +137,11 @@ foreach ($n in $USER_FIRST_LAST_LIST) {
 }
 ```
 
-- Save as `CREATE_USERS.ps1`
-- Right-click → **Run with PowerShell**
+- Save as `CREATE_USERS.ps1` on Desktop
+- Run Windows Powershell ISE as Administrator
+- Open script `CREATE_USERS.ps1`
+- Enter `Set-ExecutionPolicy Unrestricted` in the terminal
+- Run Script
 
 ---
 
