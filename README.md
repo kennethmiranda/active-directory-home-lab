@@ -10,9 +10,9 @@ This project guides you step-by-step through setting up a Windows Active Directo
 - [Download VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 - Install:
   - **Windows Hosts** package
-    ![VM Setup Screenshot 1](./images/virtualbox1.PNG)
+    ![Virtual Box Screenshot 1](./images/virtual_box1.PNG)
   - **Extension Pack**
-    ![VM Setup Screenshot 2](./images/virtualbox2.PNG)
+    ![Virtual Box Screenshot 2](./images/virtual_box2.PNG)
 
 ### 💿 ISOs Needed
 - [Windows Server 2019 ISO](https://www.microsoft.com/en-us/evalcenter/download-windows-server-2019)
@@ -30,6 +30,7 @@ This project guides you step-by-step through setting up a Windows Active Directo
   - **Adapter 1**: NAT
   - **Adapter 2**: Internal Network (e.g., `intnet`)
 - Mount the **Windows Server 2019 ISO**
+![DCvm Setup GIF](./images/DCvm.gif)
 
 ### Install Windows Server 2019
 - Edition: **Standard Evaluation (Desktop Experience)**
@@ -49,6 +50,8 @@ Subnet: 255.255.255.0
 Gateway: (leave blank)
 DNS: 127.0.0.1
 ```
+![Network Configuration GIF](./images/network_connections.gif)
+
 Then restart the DC (Domain Controller) PC.
 
 ---
@@ -58,12 +61,16 @@ Then restart the DC (Domain Controller) PC.
 ### Add Role
 - **Server Manager** → Add Roles and Features
 - Select: **Active Directory Domain Services**
+![Active Directory Domain Services Install Screenshot](./images/adds_install.PNG)
+
 
 ### Promote Server
 - Click ⚠️ flag → **Promote this server to a domain controller**
 - Deployment: **Add a new forest**
 - Root domain: `mydomain.com`
 - Password: `Password1`
+![Promote Server Screenshot](./images/promote_server.PNG)
+
 - Install and complete, then sign back in
 
 ---
@@ -78,6 +85,8 @@ Then restart the DC (Domain Controller) PC.
   - Password: `Password1`
   - Settings: Uncheck "User must change password", check "Password never expires"
 - Add user to group: `Domain Admins`
+![Domain Admin Account GIF](./images/domain_admin_account.gif)
+
 - Sign out and sign in with this new domain account
 
 ---
@@ -86,13 +95,19 @@ Then restart the DC (Domain Controller) PC.
 
 ### Enable NAT
 - Add Role: **Remote Access** → Include **Routing**
+![NAT Server Roles Screenshot](./images/NAT1.PNG)
+![NAT Role Services Screenshot](./images/NAT2.PNG)
 - Open **Routing and Remote Access**
 - Right-click DC → Configure and Enable Routing and Remote Access:
+![NAT Routing and Remote Access Screenshot](./images/NAT3.PNG)
   - Type: **NAT**
+  ![NAT Configuration Screenshot](./images/NAT4.PNG)
   - Public interface: `INTERNET`
+  ![NAT Internet Connection Screenshot](./images/NAT5.PNG)
 
 ### Configure DHCP
 - Add Role: **DHCP Server**
+![DHCP Server Roles Screenshot](./images/DHCP1.PNG)
 - Open DHCP → IPv4 → New Scope:
   - Name: `172.16.0.100-200`
   - IP Range: `172.16.0.100` - `172.16.0.200`
@@ -100,6 +115,10 @@ Then restart the DC (Domain Controller) PC.
   - Router: `172.16.0.1`
   - Domain: `mydomain.com` & `172.16.0.1`
 - Activate scope, authorize and refresh
+![DHCP New Scope GIF](./images/DHCP2.gif)
+
+Server Options - Router:
+![DHCP Server Options Screenshot](./images/DHCP3.PNG)
 
 ---
 
@@ -142,6 +161,7 @@ foreach ($n in $USER_FIRST_LAST_LIST) {
 - Open script `CREATE_USERS.ps1`
 - Enter `Set-ExecutionPolicy Unrestricted` in the terminal
 - Run Script
+![PowerShell Script GIF](./images/powershell.gif)
 
 ---
 
@@ -153,6 +173,7 @@ foreach ($n in $USER_FIRST_LAST_LIST) {
 - Clipboard & Drag'n'Drop: **Bidirectional**
 - Network: **Internal Network**
 - Mount **Windows 10 ISO**
+![CLIENT1vm Setup GIF](./images/CLIENT1vm.gif)
 
 ### Install Windows 10
 - No product key → **Windows 10 Pro x64**
@@ -167,6 +188,8 @@ foreach ($n in $USER_FIRST_LAST_LIST) {
   ipconfig /all
   ping www.google.com
   ```
+![Network Testing GIF](./images/network_testing.gif)
+
 - If Default Gateway is missing:
   - Check DHCP settings on the Domain Controller Virtual Machine 
   - Ensure router IP `172.16.0.1` is configured under Server Options
@@ -190,6 +213,7 @@ foreach ($n in $USER_FIRST_LAST_LIST) {
 2. Provide domain admin credentials (e.g., `a-jdoe` / `Password1`)
 3. Restart
 4. Log in via **Other user** using a domain account
+![Join CLIENT1 to Domain GIF](./images/join_CLIENT1_Domain.gif)
 
 ---
 
