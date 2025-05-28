@@ -223,6 +223,7 @@ foreach ($n in $USER_FIRST_LAST_LIST) {
 
 ## 🖥️ 8. Join CLIENT1 to Domain
 
+### Join Domain
 - On CLIENT1, Right-click Start → System → Rename this PC (Advanced)
 - Rename: `CLIENT1`
 - Join domain: `mydomain.com`
