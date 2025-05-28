@@ -2,6 +2,10 @@
 
 This project guides you step-by-step through setting up a Windows Active Directory home lab environment using Oracle VirtualBox. Ideal for IT Support professionals and students preparing for real-world experience.
 
+Diagram:
+![Active Directory Home Lab Diagram](./images/home_lab_diagram.PNG)
+photo credit: Josh Madakor https://youtu.be/MHsI8hJmggI?si=5vCUiAvUFuN-byRg
+
 ---
 
 ## 📥 1. Download & Install Required Software
