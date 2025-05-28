@@ -63,7 +63,6 @@ Then restart the DC (Domain Controller) PC.
 - Select: **Active Directory Domain Services**
   ![Active Directory Domain Services Install Screenshot](./images/adds_install.PNG)
 
-
 ### Promote Server
 - Click ⚠️ flag → **Promote this server to a domain controller**
 - Deployment: **Add a new forest**
