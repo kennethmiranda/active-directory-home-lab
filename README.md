@@ -61,6 +61,7 @@ Then restart the DC (Domain Controller) PC.
 ### Add Role
 - **Server Manager** → Add Roles and Features
 - Select: **Active Directory Domain Services**
+  
   ![Active Directory Domain Services Install Screenshot](./images/adds_install.PNG)
 
 ### Promote Server
@@ -94,18 +95,23 @@ Then restart the DC (Domain Controller) PC.
 
 ### Enable NAT
 - Add Role: **Remote Access** → Include **Routing**
+  
   ![NAT Server Roles Screenshot](./images/NAT1.PNG)
   ![NAT Role Services Screenshot](./images/NAT2.PNG)
 - Open **Routing and Remote Access**
 - Right-click DC → Configure and Enable Routing and Remote Access:
+  
   ![NAT Routing and Remote Access Screenshot](./images/NAT3.PNG)
   - Type: **NAT**
+    
     ![NAT Configuration Screenshot](./images/NAT4.PNG)
   - Public interface: `INTERNET`
+    
     ![NAT Internet Connection Screenshot](./images/NAT5.PNG)
 
 ### Configure DHCP
 - Add Role: **DHCP Server**
+  
   ![DHCP Server Roles Screenshot](./images/DHCP1.PNG)
 - Open DHCP → IPv4 → New Scope:
   - Name: `172.16.0.100-200`
@@ -160,6 +166,7 @@ foreach ($n in $USER_FIRST_LAST_LIST) {
 - Open script `CREATE_USERS.ps1`
 - Enter `Set-ExecutionPolicy Unrestricted` in the terminal
 - Run Script
+  
   ![PowerShell Script GIF](./images/powershell.gif)
 
 ---
@@ -172,7 +179,8 @@ foreach ($n in $USER_FIRST_LAST_LIST) {
 - Clipboard & Drag'n'Drop: **Bidirectional**
 - Network: **Internal Network**
 - Mount **Windows 10 ISO**
-  ![CLIENT1vm Setup GIF](./images/CLIENT1vm.gif)
+  
+![CLIENT1vm Setup GIF](./images/CLIENT1vm.gif)
 
 ### Install Windows 10
 - No product key → **Windows 10 Pro x64**
