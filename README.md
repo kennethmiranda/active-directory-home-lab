@@ -223,13 +223,12 @@ foreach ($n in $USER_FIRST_LAST_LIST) {
 
 ## 🖥️ 8. Join CLIENT1 to Domain
 
-1. On CLIENT1:
-  - Right-click Start → System → Rename this PC (Advanced)
-  - Rename: `CLIENT1`
-  - Join domain: `mydomain.com`
-2. Provide domain admin credentials (e.g., `a-jdoe` / `Password1`)
-3. Restart
-4. Log in via **Other user** using a domain account
+- On CLIENT1, Right-click Start → System → Rename this PC (Advanced)
+- Rename: `CLIENT1`
+- Join domain: `mydomain.com`
+- Provide domain admin credentials (e.g., `a-jdoe` / `Password1`)
+- Restart
+- Log in via **Other user** using a domain account
   
   ![Join CLIENT1 to Domain GIF](./images/join_CLIENT1_Domain.gif)
 
