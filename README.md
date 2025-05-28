@@ -167,11 +167,17 @@ foreach ($n in $USER_FIRST_LAST_LIST) {
   ipconfig /all
   ping www.google.com
   ```
-- If there are issues:
+- If Default Gateway is missing:
   - Check DHCP settings on the Domain Controller Virtual Machine 
   - Ensure router IP `172.16.0.1` is configured under Server Options
   - Restart DHCP service
   - On CLIENT1: `ipconfig /renew` and test network again
+
+- If ping www.google.com gives `Ping request could not find host www.google.com. Please check the name and try again.`:
+  - Check DHCP settings on the Domain Controller Virtual Machine 
+  - Ensure DNS Servers IP `172.16.0.1` is configured under Scope Options
+  - Restart DHCP service
+  - On CLIENT1: `ipconfig /renew` and test network again with `ping www.google.com` 
 
 ---
 
