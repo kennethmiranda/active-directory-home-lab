@@ -4,7 +4,7 @@ This project guides you step-by-step through setting up a Windows Active Directo
 
 Diagram:
 ![Active Directory Home Lab Diagram](./images/home_lab_diagram.PNG)
-photo credit: Josh Madakor https://youtu.be/MHsI8hJmggI?si=5vCUiAvUFuN-byRg
+photo credit: [Josh Madakor](https://youtu.be/MHsI8hJmggI?si=5vCUiAvUFuN-byRg)
 
 ---
 
