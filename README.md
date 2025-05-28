@@ -162,7 +162,7 @@ foreach ($n in $USER_FIRST_LAST_LIST) {
 - Skip all additional settings
 
 ### Network Testing
-- Run in CMD (command prompt):
+- Run in cmd (Command Prompt):
   ```
   ipconfig /all
   ping www.google.com
@@ -173,7 +173,7 @@ foreach ($n in $USER_FIRST_LAST_LIST) {
   - Restart DHCP service
   - On CLIENT1: `ipconfig /renew` and test network again
 
-- If ping www.google.com gives `Ping request could not find host www.google.com. Please check the name and try again.`:
+- If `ping www.google.com` gives `Ping request could not find host www.google.com. Please check the name and try again.`:
   - Check DHCP settings on the Domain Controller Virtual Machine 
   - Ensure DNS Servers IP `172.16.0.1` is configured under Scope Options
   - Restart DHCP service
